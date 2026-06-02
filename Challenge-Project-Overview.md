@@ -18,45 +18,55 @@
 
 ---
 
-### 🔍 SME Feedback from the Break Through Tech Evaluation Team
+## 📋 BTT Internal Evaluation Notes
+*(This section is for BTT staff only — remove before sharing with students)*
 
-*Challenge Advisor: Please address the following feedback by editing this page. Your AI Studio Coach can help make project adjustments as needed, too. In addition to the grey section above, this section should be removed before sharing the repo with your student team.*
+| Check | Status | Notes |
+|-------|--------|-------|
+| Python Compatibility | 🟢 | The project uses Python-based tools (XGBoost, Jupyter, Streamlit) and is compliant with institutional ML engineering standards. |
+| Data Readiness | 🟡 | The data is publicly available; however, without a specified size, there is a risk of encountering large data that may require excessive preprocessing work. |
+| Resource Check | 🟢 | The project primarily utilizes accessible, free-tier tools, eliminating barriers to entry for students. |
+
+**Student Fit Score:** 7/10  
+**Technical Depth Score:** 8/10  
+**Overall Recommendation:** REVISE
+
+**Advisor Feedback Draft:**
+The project demonstrates a clear understanding of how to address a socially relevant issue and leverage advanced modeling techniques. However, focus should be placed on ensuring data accessibility and management for students' success. Comprehensive onboarding and clear guidelines on handling data complexity will be crucial.
 
 ---
 
-# [Project Title]
+# Predicting Organ Transplant Waitlist Outcomes & Optimizing Allocation
 
-**Company / Org:** [Company / Org Name]  
-**Challenge Advisor:** [Name, Title, Email]  
+**Company / Org:** Other  
+**Challenge Advisor:** Deepti Bahel, baheldeepti@gmail.com  
 **Program:** Break Through Tech AI Studio - Fall 2026
 
 ---
 
-## 🏢 About [Company / Org Name]
+## 🏢 About Other
 
-[2-3 sentences about your company: what you do, your industry, etc. You may also choose to specify your specific department or team.]
+Other is dedicated to improving healthcare outcomes through advanced analytics and predictive modeling. Our focus is on transparency and risk assessment in the organ allocation process.
 
 ---
 
 ## 🎯 The Challenge
 
 ### Project Summary
-[In 2-3 sentences, describe what you're asking the team to do. Be specific about the type of data, ML techniques, and potential impact.]
-
-> **Example:** "In this project, your team will use customer transaction data and classification algorithms to build a model that predicts which users are likely to churn. This will help our retention team prioritize outreach."
+This project builds predictive models and analytical tools to identify risk and improve transparency in organ allocation patterns. The goal is to provide insights into which patients are at highest risk while waiting, expected wait times, and geographic or systemic factors influencing transplant success.
 
 ### Success Criteria
-[What does success look like? Describe evaluation metrics (accuracy, F1 score, etc.) or qualitative outcomes that would make this project valuable to your company.]
+Model performance targets: ROC-AUC >= 0.78, PR-AUC >= 0.65, Brier score <= 0.18, Lift in top decile >= 2.5x, and C-index >= 0.72. Success is also measured by fairness (subgroup performance within 0.05 AUC) and deliverable quality.
 
 ### Project Milestones
 
 Use these milestones to guide your work. Your team will create a **GitHub Projects board** to track tasks within each milestone.
 
-| Month | Milestone | Key Activities |
-|-------|-----------|----------------|
-| **September** | [e.g., Data Understanding] | [e.g., Explore dataset, handle missing values, document findings] |
-| **October** | [e.g., Model Development] | [e.g., Train baseline model, experiment with approaches, iterate] |
-| **November** | [e.g., Evaluation & Presentation] | [e.g., Finalize model, prepare presentation, document results] |
+| Month      | Milestone          | Key Activities                                                  |
+|------------|--------------------|----------------------------------------------------------------|
+| **September**  | Data Understanding | Explore dataset, handle missing values, document findings       |
+| **October**    | Model Development  | Train baseline model, experiment with approaches, iterate      |
+| **November**   | Evaluation & Presentation | Finalize model, prepare presentation, document results        |
 
 > **Note for the team:** Please create a GitHub Projects board in this repository to break these milestones into weekly tasks. Go to the **Projects** tab → **New project** → Choose **Board** → Add columns for each month.
 
@@ -64,13 +74,13 @@ Use these milestones to guide your work. Your team will create a **GitHub Projec
 
 ## 📊 Dataset
 
-**Name and Source:** [Dataset name and where it's from]  
-**Format:** [e.g., CSV, JSON, images]  
-**Size:** [Approximate size in MB/GB]  
-**Location:** [Link to dataset or instructions for accessing it]
+**Name and Source:** OPTN national transplant data  
+**Format:** Structured and unstructured data (e.g., STAR files)  
+**Size:** unknown  
+**Location:** [Insert link to dataset or instructions for accessing it]
 
 ### Key Details
-- [Brief description of what's in the data]
+- Publicly available OPTN national transplant data, including STAR files with structured patient data (blood type, region, age, sex, race/ethnicity, medical urgency scores) and unstructured free-text fields for cause of death narratives and comorbidity notes.
 - [Any known limitations or preprocessing needed]
 - [Link to data dictionary or documentation, if available]
 
@@ -78,13 +88,27 @@ Use these milestones to guide your work. Your team will create a **GitHub Projec
 
 ## 🛠️ Suggested Approach
 
-**ML Problem Type:** [e.g., Classification, Regression, NLP, Computer Vision, LLM/RAG]
+**ML Problem Type:** Classification
 
 **Recommended Libraries:**
-- [e.g., pandas, scikit-learn, TensorFlow, Hugging Face]
+- XGBoost
+- Logistic Regression
+- Cox Proportional Hazards (Cox PH)
+- SHAP
+- Streamlit
+- GitHub
+- Jupyter Notebooks
+- Docker
+- CI/CD
+- Large Language Models (LLMs) such as Claude or GPT
+- Google Colab
 
 **Evaluation Metrics:**
-- [e.g., Accuracy, Precision/Recall, RMSE, BLEU score]
+- ROC-AUC
+- PR-AUC
+- Brier score
+- Lift in top decile
+- C-index
 
 ---
 
@@ -114,13 +138,13 @@ The following resources will help your team understand the problem space and pot
 ## 🤝 How We'll Work Together
 
 **Check-ins:** During our biweekly 60-min AI Studio Lab Section meeting block (2nd and 4th week of every month)  
-**Communication:** [e.g., Slack (Break Through Tech workspace) or email]  
-**Response time:** [e.g., Within 48 hours on weekdays]  
+**Communication:** Slack (Break Through Tech workspace)  
+**Response time:** Within 48 hours on weekdays  
 
 **Recommended Tools:**
-- **Coding:** [e.g., Google Colab, VS Code]
-- **Collaboration:** [e.g., GitHub, Notion]
-- **Virtual Meetings:** [e.g., Zoom, Google Meet]
+- **Coding:** Google Colab, VS Code
+- **Collaboration:** GitHub, Notion
+- **Virtual Meetings:** Zoom, Google Meet
 
 ---
 
@@ -130,10 +154,13 @@ The following resources will help your team understand the problem space and pot
 2. **Begin reviewing the dataset** using the link above
 3. **Read the GitHub Projects documentation** [here](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
 
-I’m excited to work with you!
+I'm excited to work with you!
 
 ---
 
 ## ❓ Questions?
 
-Please bring any questions to our first meeting during the week of August 24th (Break Through Tech’s Bridge to Studio - Session B). 
+Please bring any questions to our first meeting during the week of August 24th (Break Through Tech's Bridge to Studio - Session B).
+
+
+---
