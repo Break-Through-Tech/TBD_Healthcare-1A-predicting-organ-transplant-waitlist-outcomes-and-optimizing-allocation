@@ -40,7 +40,7 @@ The project demonstrates a clear understanding of how to address a socially rele
 
 **Company / Org:** Other  
 **Challenge Advisor:** Deepti Bahel, baheldeepti@gmail.com  
-**AI Studio Coach: ** Nagalakshmi Pulivarthi, nagalakshmi.pulivarthi@breakthroughtech.org
+**AI Studio Coach: ** Nagalakshmi Pulivarthi, nagalakshmi.pulivarthi@breakthroughtech.org   
 **Program:** Break Through Tech AI Studio - Fall 2026
 
 ---
