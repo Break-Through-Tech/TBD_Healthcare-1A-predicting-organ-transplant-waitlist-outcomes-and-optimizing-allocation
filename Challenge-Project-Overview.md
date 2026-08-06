@@ -20,8 +20,6 @@
 
 ## 📋 BTT Internal Evaluation Notes
 *(This section is for BTT staff only — remove before sharing with students)*
-## 📋 BTT Internal Evaluation Notes
-*(This section is for BTT staff and CAs only — remove before sharing with students)*
 
 ### Technical Vetting
 | Check | Status | Notes |
@@ -36,7 +34,7 @@
 - **Overall Recommendation:** REVISE
 
 ### Advisor Feedback Draft
-The project shows a clear understanding of addressing a socially relevant issue and leveraging advanced modeling techniques. However, focus should be placed on ensuring data accessibility and management for students' success. Comprehensive onboarding and clear guidelines on handling data complexity will be crucial.
+The project shows a clear understanding of how to address a socially relevant issue and leverage advanced modeling techniques. However, focus should be placed on ensuring data accessibility and management for students' success. Comprehensive onboarding and clear guidelines on handling data complexity will be crucial.
 
 ---
 
@@ -49,7 +47,7 @@ The project shows a clear understanding of addressing a socially relevant issue 
 ---
 
 ## 🏢 About Other
-This project operates within the public health and medical logistics sector, focusing on the critical domain of organ transplant allocation. The team's primary objective is to develop analytical tools that increase transparency and improve patient outcomes by identifying systemic inefficiencies in the current organ distribution infrastructure.
+This project operates within the public health and medical logistics sector, focusing on organ transplant allocation. The team's primary objective is to develop analytical tools that increase transparency and improve patient outcomes by identifying systemic inefficiencies in the current organ distribution infrastructure.
 
 ---
 
