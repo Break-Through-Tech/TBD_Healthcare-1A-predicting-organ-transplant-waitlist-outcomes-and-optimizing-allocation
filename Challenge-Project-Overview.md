@@ -60,13 +60,17 @@ Model performance targets: ROC-AUC >= 0.78, PR-AUC >= 0.65, Brier score <= 0.18,
 
 ### Project Milestones
 Use these milestones to guide your work. Your team will create a GitHub Projects board to track tasks within each milestone.
-| Month | Milestone | Key Activities |
-|-------|-----------|----------------|
-| **September** | Data Exploration & Preprocessing | Initial ingestion of STAR files, cleaning missing values, and establishing anomaly detection frameworks for medical variables. |
-| **October** | Feature Engineering & Baseline Modeling | Transforming categorical medical data into model-ready features and establishing performance benchmarks using Logistic Regression and Cox PH. |
-| **November** | Model Optimization & Evaluation | Performing hyperparameter tuning, validating against success metrics, and executing model interpretability checks via SHAP analysis. |
-| **December** | Insights, Deliverables & Presentation | Finalizing the insight report, packaging the Streamlit dashboard, and creating a reproducible repository for stakeholder handoff. |
 
+| Month | Milestone | Key Activities |
+| :--- | :--- | :--- |
+| September | Business Scoping, Data Preparation & Feature Engineering | • Define key clinical use cases ("Which patients are at highest risk?", "What factors drive longer waits?") and frame problem.<br>• Clean and merge organ donation datasets; handle missing values.<br>• Engineer domain features including wait time durations, medical urgency scores, and regional indicators. |
+| October | Predictive & Survival Modeling | • Build baseline and advanced machine learning models.<br>• Train classification and survival models (e.g., Cox Proportional Hazards) to predict waitlist outcomes.<br>• Evaluate performance using ROC-AUC (classification) and Concordance index ($C$-index for survival models). |
+| November / December | Model Evaluation, Interpretability & Final Deliverables | • Interpret model predictions using SHAP to identify key risk drivers (e.g., blood type mismatch delays, regional disparities).<br>• Validate empirical findings against domain knowledge and literature.<br>• Develop an interactive Streamlit dashboard to visualize patient risk and allocation patterns.<br>• Finalize clean GitHub repository, Jupyter notebooks, business insight report, and final presentation. |
+
+### Stretch Goals
+* **Pipeline Containerization & CI/CD:** Containerize the data pipeline with Docker and implement CI/CD for quarterly dataset refreshes.
+* **Model & Policy Drift Detection:** Implement drift monitoring to evaluate whether model accuracy degrades as organ allocation policies change.
+* **Authenticated Cloud Deployment:** Deploy the Streamlit application to a secure live web server with user authentication.
 > **Note for the team:** Please create a GitHub Projects board in this repository to break these milestones into weekly tasks. Go to the **Projects** tab → **New project** → Choose **Board** → Add columns for each month.
 
 ---
