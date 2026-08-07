@@ -53,93 +53,110 @@ This project operates within the public health and medical logistics sector, foc
 
 ## 🎯 The Challenge
 ### Project Summary
-The team will build predictive models and analytical dashboards to assess risk levels for patients on organ transplant waitlists and analyze geographic or systemic factors influencing transplant success. By utilizing OPTN national transplant datasets and integrating ML techniques like XGBoost and survival analysis (Cox PH), the project aims to produce actionable insights that support more equitable and efficient organ allocation decisions.
+
+This project builds predictive models and analytical tools to identify risk and improve transparency in organ allocation patterns.
+
+Organizations want better insights into:
+- Who is at highest risk while waiting 
+- Expected wait times 
+- Factors influencing successful transplants 
+
 
 ### Success Criteria
-Model performance targets: ROC-AUC >= 0.78, PR-AUC >= 0.65, Brier score <= 0.18, Lift in top decile >= 2.5x, and C-index >= 0.72. Success is also measured by fairness (subgroup performance within 0.05 AUC) and deliverable quality.
+
+Success will be measured across three dimensions: model performance, deliverable quality, and insight value. 
+
+[Challenge Advisor to add 3-5 bullets to expound on this]
 
 ### Project Milestones
 Use these milestones to guide your work. Your team will create a GitHub Projects board to track tasks within each milestone.
 
-| Month | Milestone | Key Activities |
-| :--- | :--- | :--- |
-| September | Business Scoping, Data Preparation & Feature Engineering | • Define key clinical use cases ("Which patients are at highest risk?", "What factors drive longer waits?") and frame problem.<br>• Clean and merge organ donation datasets; handle missing values.<br>• Engineer domain features including wait time durations, medical urgency scores, and regional indicators. |
-| October | Predictive & Survival Modeling | • Build baseline and advanced machine learning models.<br>• Train classification and survival models (e.g., Cox Proportional Hazards) to predict waitlist outcomes.<br>• Evaluate performance using ROC-AUC (classification) and Concordance index ($C$-index for survival models). |
-| November / December | Model Evaluation, Interpretability & Final Deliverables | • Interpret model predictions using SHAP to identify key risk drivers (e.g., blood type mismatch delays, regional disparities).<br>• Validate empirical findings against domain knowledge and literature.<br>• Develop an interactive Streamlit dashboard to visualize patient risk and allocation patterns.<br>• Finalize clean GitHub repository, Jupyter notebooks, business insight report, and final presentation. |
-
-### Stretch Goals
-* **Pipeline Containerization & CI/CD:** Containerize the data pipeline with Docker and implement CI/CD for quarterly dataset refreshes.
-* **Model & Policy Drift Detection:** Implement drift monitoring to evaluate whether model accuracy degrades as organ allocation policies change.
-* **Authenticated Cloud Deployment:** Deploy the Streamlit application to a secure live web server with user authentication.
-> **Note for the team:** Please create a GitHub Projects board in this repository to break these milestones into weekly tasks. Go to the **Projects** tab → **New project** → Choose **Board** → Add columns for each month.
+| Weeks | Milestone | Key Activities |
+|---|---|---|
+| Weeks 1–2 | Business Understanding & Scoping | • Define use cases:<br>&nbsp;&nbsp;&nbsp;&nbsp;◦ "Which patients are at highest risk?"<br>&nbsp;&nbsp;&nbsp;&nbsp;◦ "What factors drive longer waits?"<br>• Create problem framing doc |
+| Weeks 3–5 | Data Preparation | • Clean and merge datasets<br>• Handle missing values<br>• Feature engineering:<br>&nbsp;&nbsp;&nbsp;&nbsp;◦ Wait time duration<br>&nbsp;&nbsp;&nbsp;&nbsp;◦ Medical urgency scores<br>&nbsp;&nbsp;&nbsp;&nbsp;◦ Regional indicators |
+| Weeks 6–8 | Modeling | • Build baseline models<br>• Evaluate:<br>&nbsp;&nbsp;&nbsp;&nbsp;◦ ROC-AUC (classification)<br>&nbsp;&nbsp;&nbsp;&nbsp;◦ Concordance index (survival models)<br>• Compare simple vs. advanced models |
+| Weeks 9–10 | Evaluation & Insights | • Interpret models using SHAP<br>• Identify key drivers:<br>&nbsp;&nbsp;&nbsp;&nbsp;◦ Blood type mismatch delays<br>&nbsp;&nbsp;&nbsp;&nbsp;◦ Regional disparities<br>• Validate findings against domain knowledge |
+| Weeks 11–12 | Deliverables | • GitHub repo (clean, reproducible pipeline)<br>• Jupyter notebooks<br>• Insight report (business-focused)<br>• Optional dashboard (Streamlit) |
 
 ---
 
 ## 📊 Dataset
 **Name and Source:** OPTN National Transplant Data (STAR files)  
 **Format:** CSV / Structured Data and Unstructured Text  
-**Size:** unknown  
-**Location:** Publicly available via OPTN/UNOS data request portals.  
+**Size:** Less than 1 GB  
+**Location:** https://optn.transplant.hrsa.gov/data/view-data-reports/national-data/
 
 ### Key Details
-- Publicly available OPTN national transplant data, including STAR files with structured patient data (blood type, region, age, sex, race/ethnicity, medical urgency scores) and unstructured free-text fields for cause of death narratives and comorbidity notes.
-- Data must be cleaned to address potential missingness in longitudinal follow-up records and normalized for consistency across different transplant center reporting standards.
-
+- [Brief description of what's in the data]
+- [Any known limitations or preprocessing needed]
+- [Link to data dictionary or documentation, if available]
+  
 ---
 
 ## 🛠️ Suggested Approach
-**ML Problem Type:** Classification & Survival Analysis  
+
+**ML Problem Type:** Classification & Survival Analysis
+
 **Recommended Libraries:**
-- XGBoost
-- Logistic Regression
-- Cox Proportional Hazards (Cox PH)
-- SHAP
-- Streamlit
-- GitHub
-- Jupyter Notebooks
-- Docker
-- CI/CD
-- Large Language Models (LLMs) such as Claude or GPT
-- Google Colab
-**Evaluation Metrics:** ROC-AUC, PR-AUC, Brier score, Lift in top decile, and C-index (with specific attention to subgroup fairness metrics).
+- [e.g., pandas, scikit-learn, TensorFlow, Hugging Face]
+
+**Evaluation Metrics:**
+- [e.g., Accuracy, Precision/Recall, RMSE, BLEU score]
 
 ---
 
 ## 📚 Resources to Get Started
+
 The following resources will help your team understand the problem space and potential technical approaches for this project:
+
 **Background Reading:**
-- Official OPTN Data Policy and Organ Allocation System documentation.
+- [e.g., Link to an article or blog post about the problem domain]
+- [e.g., Link to an industry report or case study]
+
 **Technical Tutorials:**
-- Scikit-survival documentation for Cox PH implementations and XGBoost classification guides.
+- [e.g., Link to a free tutorial on the ML technique(s) involved]
+- [e.g., Link to documentation for a key library or tool]
+
 **Code Examples:**
-- Starter template repositories featuring standard EDA and SHAP visualization pipelines.
+- [e.g., Link to a relevant GitHub repo]
+- [e.g., Link to a sample implementation or starter code]
+
+**Other:**
+- [Links to any additional resources — e.g., papers, videos, podcasts, etc.]
+
+*Feel free to explore beyond these, and share anything interesting you find with me!*
 
 ---
 
 ## 🤝 How We'll Work Together
-**Check-ins:** During our biweekly 60-min AI Studio Lab Section meeting block (2nd and 4th week of every month)  
-**Communication:** Email and scheduled lab session discussions.  
-**Response time:** 48-hour response window for non-urgent project queries.  
-**Recommended Tools:**
-- **Coding:** Google Colab Free Tier  
-- **Collaboration:** GitHub, Notion  
-- **Virtual Meetings:** Zoom, Google Meet  
+
+**Official check-ins:** During our biweekly 45-minute AI Studio Lab Section meeting block (2nd and 4th week of every month)
+
+ **Other ways to reach out to me with questions:** 
+* [e.g., Your team's channel within Break Through Tech’s Discord space]
+* [e.g., Email; please copy your teammates and AI Studio Coach]
+* [e.g., Request a team check-in on Zoom]
+* [Note: I will aim to respond within 48 hours. Please reach out to your AI Studio Coach with urgent questions.]
+
+> 💡 **Challenge Advisor: Please update the above based on your availability and preference. If you are not able to answer questions or meet with fellows outside of the biweekly Lab Section check-ins, simply write in "N/A (only available during the official check-in times)"**
+
+**Recommended free coding / collaboration tools**
+* […]
+* […]
 
 ---
 
 ## 🚀 Getting Started
-1. **Review this overview document** and note any questions for our first meeting.
-2. **Begin reviewing the dataset** using the link provided in the Dataset section.
-3. **Read the GitHub Projects documentation** [here](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects).
 
-I'm excited to work with you!
+1. **Review this overview document** and note any questions for our first meeting
+2. **Begin reviewing the dataset** using the link above
+3. **Read the GitHub Projects documentation** [here](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
+
+I’m excited to work with you!
 
 ---
 
 ## ❓ Questions?
-Please bring any questions to our first meeting during the week of August 24th (Break Through Tech's Bridge to Studio - Session B).
 
-Please bring any questions to our first meeting during the week of August 24th (Break Through Tech's Bridge to Studio - Session B).
-
-
----
+Please bring any questions to our first meeting during the week of August 24th (Break Through Tech’s Bridge to Studio - Session C). 
