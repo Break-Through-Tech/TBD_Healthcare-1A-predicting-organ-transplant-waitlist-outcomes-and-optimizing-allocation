@@ -2,6 +2,7 @@
 
 **Company / Org:** MediMate Foundation  
 **Challenge Advisor:** Deepti Bahel, baheldeepti@gmail.com  
+**AI Studio Coach:** Nagalakshmi Pulivarthi,nagalakshmi.pulivarthi@breakthroughtech.org   
 **Program:** Break Through Tech AI Studio - Fall 2026
 
 ---
